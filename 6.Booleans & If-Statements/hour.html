@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hour</title>
+  </head>
+  <body>
+    <button onclick="displayMessage()">
+      Display Message
+    </button>
+
+    <script>
+      function displayMessage(){
+        const name = 'Ibrahim';
+        const d = new Date();
+        let hour = d.getHours();
+
+        if (hour >= 6 && hour <= 12){
+          console.log(`Good morning ${name}!`);
+        } else if (hour > 12 && hour <= 17){
+          console.log(`Good afternoon ${name}!`);
+        } else{
+          console.log(`Good night ${name}!`);
+        }
+
+        console.log(hour);
+      }
+    </script>
+  </body>
+</html>
