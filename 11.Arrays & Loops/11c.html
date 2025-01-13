@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11c</title>
+    <!-- <link rel="stylesheet" href="styles/dom-projects.css"> -->
+  </head>
+  <body>
+
+    <script>
+      const myArray = [1, 20, 24, 5, 3];
+      console.log(arraySwap(myArray));
+
+      function arraySwap(array){
+        const l = 0;
+        const r = array.length - 1;
+
+        const temp = array[l];
+        array[l] = array[r];
+        array[r] = temp;
+        
+        return array;
+      }
+    </script>
+  </body>
+</html>
