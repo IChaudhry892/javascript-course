@@ -45,7 +45,7 @@
       }
 
       console.log(randomNumber);
-
+ 
       const todoList = [
         'make dinner',
         'wash dishes',
@@ -72,6 +72,15 @@
         numsDoubled.push(nums[i] * 2);
       }
       console.log(numsDoubled);
+
+      const array1 = [1, 2, 3];
+      // const array2 = array1;
+      const array2 = array1.slice();
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      const [firstValue, secondValue] = [1, 2, 3];
     </script>
   </body>
 </html>

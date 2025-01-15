@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11u</title>
+  </head>
+  <body>
+
+    <script>
+      console.log(['egg', 'apple', 'egg', 'egg', 'ham']);
+      console.log(removeAllEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+      console.log(removeFirstTwoEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+      console.log(removeLastTwoEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+      function removeAllEggs(foods){
+        for (let i = foods.length - 1; i >= 0; i--){
+          if (foods[i] === 'egg'){
+            foods.splice(i, 1);
+          }
+        }
+        return foods;
+      }
+
+      function removeFirstTwoEggs(foods){
+        let result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < foods.length; i++){
+          if (foods[i] === 'egg' && eggsRemoved < 2){
+            eggsRemoved++;
+            continue;
+          }
+          result.push(foods[i]);
+        }
+        return result;
+      }
+
+      function removeLastTwoEggs(foods){
+        const foodsCopy = foods.slice();
+        const reversedFoods = foodsCopy.reverse();
+        let result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < reversedFoods.length; i++){
+          if (reversedFoods[i] === 'egg' && eggsRemoved < 2){
+            eggsRemoved++;
+            continue;
+          }
+          result.push(reversedFoods[i]);
+        }
+        return result.reverse();
+      }
+    </script>
+  </body>
+</html>
